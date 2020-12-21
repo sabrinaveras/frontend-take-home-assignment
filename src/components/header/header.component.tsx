@@ -4,7 +4,7 @@ import * as React from 'react';
 import * as Styled from './header.styles';
 
 // images
-const logo = require('../icons/logo.svg') as string;
+const logo = require('../../icons/logo.svg') as string;
 
 const HeaderComponent: React.FunctionComponent = () => {
   return (
