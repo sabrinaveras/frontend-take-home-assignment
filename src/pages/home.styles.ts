@@ -6,4 +6,5 @@ export const Container = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  background-color: #f4f8fa;
 `;
