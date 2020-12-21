@@ -4,7 +4,7 @@ import * as React from 'react';
 import * as Styled from './home.styles';
 
 // components
-import Header from '../components/header.component';
+import Header from '../components/header/header.component';
 
 const HomePage: React.FunctionComponent = () => {
   return (
