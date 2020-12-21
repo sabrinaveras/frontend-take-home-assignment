@@ -16,4 +16,4 @@ export const Card = styled.div`
   margin: 24px auto 24px;
   justify-content: center;
   align-items: center;
-`
+`;
