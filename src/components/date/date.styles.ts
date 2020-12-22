@@ -16,8 +16,10 @@ export const Arrow = styled.img`
   width: 10px;
   height: 18px;
 
-  margin: auto 15px;
+  //margin: auto 15px;
   cursor: pointer;
+  transform: ${props => props.orientation};
+  margin: ${props => props.margin};
 `;
 
 export const MonthYear = styled.div`
