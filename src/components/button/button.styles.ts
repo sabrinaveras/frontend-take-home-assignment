@@ -4,7 +4,6 @@ export const Button = styled.button`
   width: 320px;
   height: 56px;
 
-  background-color: ${props => props.backgroundColor}; //#1b31a8;
   border-radius: 32px;
   border: none;
 
@@ -22,4 +21,8 @@ export const Button = styled.button`
     box-shadow: none;
     outline: none;
   }
+`;
+
+export const ButtonCardConfirm = styled(Button)`
+  background-color: #1b31a8;
 `;

@@ -9,16 +9,7 @@ interface ButtonProps {
 }
 
 const ButtonComponent: React.FunctionComponent<ButtonProps> = ({
-  backgroundColor,
   children
-}) => (
-  <Styled.Button backgroundColor={backgroundColor}>{children}</Styled.Button>
-);
+}) => <Styled.ButtonCardConfirm>{children}</Styled.ButtonCardConfirm>;
 
 export default ButtonComponent;
-//
-// const ButtonComponent: React.FunctionComponent = () => {
-//   return <Styled.Button type="submit">Confirm</Styled.Button>;
-// };
-//
-// export default ButtonComponent;
