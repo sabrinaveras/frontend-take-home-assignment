@@ -15,11 +15,16 @@ export const Date = styled.div`
 export const Arrow = styled.img`
   width: 10px;
   height: 18px;
+`;
 
-  //margin: auto 15px;
-  cursor: pointer;
-  transform: ${props => props.orientation};
-  margin: ${props => props.margin};
+export const ArrowLeft = styled(Arrow)`
+  transform: rotate(0deg);
+  margin: auto auto auto 15px;
+`;
+
+export const ArrowRight = styled(Arrow)`
+  transform: rotate(180deg);
+  margin: auto 15px auto auto;
 `;
 
 export const MonthYear = styled.div`
