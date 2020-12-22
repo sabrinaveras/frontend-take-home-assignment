@@ -15,6 +15,7 @@ export const Date = styled.div`
 export const Arrow = styled.img`
   width: 10px;
   height: 18px;
+  cursor: pointer;
 `;
 
 export const ArrowLeft = styled(Arrow)`
