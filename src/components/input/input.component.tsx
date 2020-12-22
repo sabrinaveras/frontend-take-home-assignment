@@ -7,7 +7,7 @@ const InputComponent: React.FunctionComponent = () => {
   return (
     <>
       <Styled.Label>Total amount</Styled.Label>
-      <Styled.Input />
+      <Styled.InputIconDollarSign />
     </>
   );
 };

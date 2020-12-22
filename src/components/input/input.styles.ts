@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
+// images
+const dollar = require('../../icons/dollar-sign.svg') as string;
+
 export const Input = styled.input`
   width: 100%;
   height: 56px;
 
-  background: #ffffff;
   border: 1px solid #e9eef2;
   box-sizing: border-box;
   border-radius: 4px;
@@ -20,6 +22,13 @@ export const Input = styled.input`
     box-shadow: none;
     outline: none;
   }
+`;
+
+export const InputIconDollarSign = styled(Input)`
+  background: #ffffff url(${dollar}) no-repeat left;
+  background-size: auto;
+  background-position-x: 10px;
+  text-indent: 40px;
 `;
 
 export const Label = styled.label`
