@@ -4,7 +4,7 @@ export const Button = styled.button`
   width: 320px;
   height: 56px;
 
-  background: #1b31a8;
+  background-color: ${props => props.backgroundColor}; //#1b31a8;
   border-radius: 32px;
   border: none;
 
