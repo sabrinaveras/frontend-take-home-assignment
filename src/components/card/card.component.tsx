@@ -15,7 +15,9 @@ const CardComponent: React.FunctionComponent = () => {
       <CardHeaderComponent />
       <CardInputComponent />
       <MonthlyAmountInfoComponent />
-      <ButtonComponent />
+      <ButtonComponent key={'button-card'} backgroundColor={'#1b31a8'}>
+        Confirm
+      </ButtonComponent>
     </Styled.Card>
   );
 };
