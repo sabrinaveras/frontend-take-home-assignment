@@ -1,7 +1,7 @@
-import { Actions, DateTypes, DECREASE_DATE } from './date.types';
+import { Actions, DateTypes, INCREASE_DATE, DECREASE_DATE } from './date.types';
 
 export const increaseDate = (date: DateTypes): Actions => ({
-  type: 'INCREASE_DATE',
+  type: INCREASE_DATE,
   payload: date
 });
 

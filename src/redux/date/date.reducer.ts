@@ -8,18 +8,22 @@ export interface DateState {
 }
 
 const INITIAL_STATE = {
-  date: { month: new Date().getMonth(), year: new Date().getFullYear() }
+  date: {
+    month: new Date().getMonth(),
+    year: new Date().getFullYear(),
+    totalMonth: 0
+  }
 };
 
 export const DateReducer = (
-  state: { date: { month: number; year: number } } = INITIAL_STATE,
+  state: DateTypes = INITIAL_STATE,
   action: Actions
 ) => {
   switch (action.type) {
     case 'INCREASE_DATE':
-      return { ...state, date: increaseDate(state.date) };
+      return { ...state, date: increaseDate(state) };
     case 'DECREASE_DATE':
-      return { ...state, date: decreaseDate(state.date) };
+      return { ...state, date: decreaseDate(state) };
     default:
       return state;
   }

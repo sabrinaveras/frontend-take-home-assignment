@@ -1,11 +1,23 @@
+/*
+ * Date type
+ * */
 export interface DateTypes {
-  month: number;
-  year: number;
+  date: {
+    month: number;
+    year: number;
+    totalMonth: number;
+  };
 }
 
+/*
+ * Date type const
+ * */
 export const INCREASE_DATE = 'INCREASE_DATE';
 export const DECREASE_DATE = 'DECREASE_DATE';
 
+/*
+ * Date type interface
+ * */
 interface IncreaseDate {
   type: typeof INCREASE_DATE;
   payload: DateTypes;
