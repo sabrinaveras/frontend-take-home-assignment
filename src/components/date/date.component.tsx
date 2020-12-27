@@ -11,14 +11,6 @@ const arrow = require('../../icons/arrow.svg') as string;
 // styled
 import * as Styled from './date.styles';
 
-// interfaces
-interface MonthlyAmount {
-  totalAmount: number;
-  totalMonths: number;
-  month: number;
-  year: number;
-}
-
 const DateComponent: React.FunctionComponent = () => {
   const monthsOfTheYear = [
     'January',
@@ -54,8 +46,8 @@ const DateComponent: React.FunctionComponent = () => {
     <Styled.Date>
       <Styled.ArrowLeft src={arrow} id={'arrow-left'} onClick={handleDate} />
       <Styled.MonthYear>
-        <h5>{monthsOfTheYear[date.month]}</h5>
-        <h6>{date.year}</h6>
+        <h5>{monthsOfTheYear[date.date.month]}</h5>
+        <h6>{date.date.year}</h6>
       </Styled.MonthYear>
       <Styled.ArrowRight src={arrow} id={'arrow-right'} onClick={handleDate} />
     </Styled.Date>

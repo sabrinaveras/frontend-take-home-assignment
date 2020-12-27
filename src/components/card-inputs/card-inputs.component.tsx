@@ -8,6 +8,7 @@ import InputComponent from '../input/input.component';
 import * as Styled from './card-inputs.styles';
 
 const CardInputComponent: React.FunctionComponent = () => {
+
   return (
     <Styled.CardInputs>
       <Styled.TotalAmount>
