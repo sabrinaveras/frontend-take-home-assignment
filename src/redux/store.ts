@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
 
-import { DateReducer } from './date/date.reducer';
+import rootReducer from './root-reducer';
 
-export const store = createStore(DateReducer);
+export const store = createStore(rootReducer);
