@@ -42,6 +42,30 @@ const DateComponent: React.FunctionComponent = () => {
     }
   };
 
+  React.useEffect(() => {
+    function handleKeyPress(event: React.KeyboardEvent) {
+      switch (event.key) {
+        case 'ArrowRight':
+          console.log('right');
+          dispatch(increaseDate(date));
+          break;
+        case 'ArrowLeft':
+          console.log('left');
+          dispatch(decreaseDate(date));
+          break;
+        default:
+          console.log('default');
+          break;
+      }
+    }
+
+    document.addEventListener('keyup', handleKeyPress);
+
+    return () => {
+      document.removeEventListener('keyup', handleKeyPress);
+    };
+  });
+
   return (
     <Styled.Date>
       <Styled.ArrowLeft src={arrow} id={'arrow-left'} onClick={handleDate} />
