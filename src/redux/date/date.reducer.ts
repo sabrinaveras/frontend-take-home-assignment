@@ -11,7 +11,7 @@ const INITIAL_STATE = {
   date: {
     month: new Date().getMonth(),
     year: new Date().getFullYear(),
-    totalMonth: 0
+    totalMonth: 1
   }
 };
 
