@@ -1,18 +1,19 @@
 import * as React from 'react';
 
-import { useDispatch } from 'react-redux';
-import { getValue } from '../../redux/total-amount/total-amount.actions';
-
 // styles
 import * as Styled from './input.styles';
 
 // interfaces
+interface UpdateInputValue {
+  updateValue(value: string): void;
+}
 
-const InputComponent: React.FunctionComponent = () => {
-  const dispatch = useDispatch();
-  const [totalAmountValue, setTotalAmountValue] = React.useState('');
+const InputComponent: React.FunctionComponent<UpdateInputValue> = ({
+  updateValue
+}) => {
+  const [inputValue, setInputValue] = React.useState('');
 
-  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleUpdateValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
 
     let value = event.target.value;
@@ -21,14 +22,18 @@ const InputComponent: React.FunctionComponent = () => {
     value = value.replace(/(?=(\d{3})+(\D))\B/g, ',');
 
     event.currentTarget.value = value;
-    setTotalAmountValue(value);
-    dispatch(getValue(value));
+
+    setInputValue(value);
+    updateValue(value);
   };
 
   return (
     <>
       <Styled.Label>Total amount</Styled.Label>
-      <Styled.InputIconDollarSign onChange={handleInput} />
+      <Styled.InputIconDollarSign
+        onChange={handleUpdateValue}
+        value={inputValue}
+      />
     </>
   );
 };
