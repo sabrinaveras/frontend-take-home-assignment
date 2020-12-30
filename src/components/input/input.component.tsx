@@ -8,9 +8,7 @@ interface UpdateInputValue {
   updateValue(value: string): void;
 }
 
-const InputComponent: React.FunctionComponent<UpdateInputValue> = ({
-  updateValue
-}) => {
+const InputComponent: React.FunctionComponent<UpdateInputValue> = ({ updateValue }) => {
   const [inputValue, setInputValue] = React.useState('');
 
   const handleUpdateValue = (event: React.ChangeEvent<HTMLInputElement>) => {
