@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { useDispatch } from 'react-redux';
-import { addValue } from '../../redux/total-amount/total-amount.actions';
+import { UpdateTotalAmount } from '../../redux/total-amount/total-amount.actions';
 
 // components
 import DateComponent from '../date/date.component';
@@ -14,7 +14,7 @@ const CardInputComponent: React.FunctionComponent = () => {
   const dispatch = useDispatch();
 
   const onUpdateValue = (value: string) => {
-    dispatch(addValue(value));
+    dispatch(UpdateTotalAmount(value));
   };
 
   return (
