@@ -1,28 +1,15 @@
-export type Action = {
-  type: 'ADD_VALUE';
-  payload: string;
-};
+export interface TotalAmountTypes {
+  // totalAmount: {
+  //   totalAmountValue: string;
+  // };
+  totalAmountValue: string;
+}
 
-// /*
-//  * Total Amount type
-//  * */
-// export interface TotalAmountTypes {
-//   // totalAmount: {
-//   value: string;
-//   // };
-// }
-//
-// /*
-//  * Total Amount const
-//  * */
-// export const GET_VALUE = 'GET_VALUE';
-//
-// /*
-//  * Total Amount interface
-//  * */
-// interface GetValue {
-//   type: typeof GET_VALUE;
-//   payload: string;
-// }
-//
-// export type Actions = GetValue;
+export const UPDATE_TOTAL_AMOUNT = 'UPDATE_TOTAL_AMOUNT';
+
+interface UpdateTotalAmount {
+  type: typeof UPDATE_TOTAL_AMOUNT;
+  payload: string;
+}
+
+export type Actions = UpdateTotalAmount;
