@@ -5,6 +5,9 @@ import { DateState } from '../../redux/date/date.reducer';
 import { DateTypes } from '../../redux/date/date.types';
 import { increaseDate, decreaseDate } from '../../redux/date/date.actions';
 
+// utils
+import { monthsOfTheYear } from '../../utils/monthsOfTheYear';
+
 // images
 const arrow = require('../../icons/arrow.svg') as string;
 
@@ -12,21 +15,6 @@ const arrow = require('../../icons/arrow.svg') as string;
 import * as Styled from './date.styles';
 
 const DateComponent: React.FunctionComponent = () => {
-  const monthsOfTheYear = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-  ];
-
   const dispatch = useDispatch();
   const date = useSelector<DateState, DateTypes>(state => state.date);
 
@@ -46,15 +34,12 @@ const DateComponent: React.FunctionComponent = () => {
     function handleKeyPress(event: React.KeyboardEvent) {
       switch (event.key) {
         case 'ArrowRight':
-          console.log('right');
           dispatch(increaseDate(date));
           break;
         case 'ArrowLeft':
-          console.log('left');
           dispatch(decreaseDate(date));
           break;
         default:
-          console.log('default');
           break;
       }
     }
