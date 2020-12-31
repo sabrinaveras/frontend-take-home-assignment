@@ -46,12 +46,15 @@ export const ReachGoalBy = styled.div`
   @media screen and (max-width: 480px) {
     label {
       font-size: 12px;
-      margin-top: 16px;
     }
   }
 
   @media screen and (max-width: 404px) {
     width: 100%;
     margin: 0;
+
+    label {
+      margin-top: 16px;
+    }
   }
 `;

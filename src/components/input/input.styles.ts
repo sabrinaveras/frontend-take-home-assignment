@@ -22,6 +22,10 @@ export const Input = styled.input`
     box-shadow: none;
     outline: none;
   }
+
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 export const InputIconDollarSign = styled(Input)`
@@ -43,4 +47,8 @@ export const Label = styled.label`
   order: 0;
   align-self: flex-start;
   flex-grow: 0;
+
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
