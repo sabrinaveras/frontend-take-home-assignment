@@ -21,6 +21,11 @@ export const Button = styled.button`
     box-shadow: none;
     outline: none;
   }
+
+  @media screen and (max-width: 404px) {
+    width: 100%;
+    margin-top: 32px;
+  }
 `;
 
 export const ButtonCardConfirm = styled(Button)`

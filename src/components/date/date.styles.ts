@@ -52,4 +52,14 @@ export const MonthYear = styled.div`
     color: #8a9ca9;
     margin: 0;
   }
+
+  @media screen and (max-width: 480px) {
+    h5 {
+      font-size: 14px;
+    }
+
+    h6 {
+      font-size: 14px;
+    }
+  }
 `;

@@ -9,6 +9,10 @@ export const MonthlyAmountInfo = styled.div`
   border: 1px solid #e9eef2;
   box-sizing: border-box;
   border-radius: 8px;
+
+  @media screen and (max-width: 404px) {
+    margin-top: 24px;
+  }
 `;
 
 export const MonthlyAmount = styled.div`
@@ -54,6 +58,28 @@ export const MonthlyAmount = styled.div`
     margin-right: 32px;
     margin-left: auto;
   }
+
+  @media screen and (max-width: 480px) {
+    h3 {
+      font-size: 18px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (max-width: 404px) {
+    display: grid;
+
+    h3 {
+      margin: 10px auto 0;
+    }
+
+    h1 {
+      margin: 0 auto;
+    }
+  }
 `;
 
 export const Detail = styled.div`
@@ -80,5 +106,13 @@ export const Detail = styled.div`
     span {
       font-weight: 600;
     }
+  }
+
+  @media screen and (max-width: 480px) {
+  }
+
+  @media screen and (max-width: 404px) {
+    height: auto;
+    padding: 10px;
   }
 `;

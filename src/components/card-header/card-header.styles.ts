@@ -9,9 +9,6 @@ export const CardHeader = styled.div`
 export const TitleSubtitle = styled.div`
   margin: auto 0 auto 16px;
 
-  //img {
-  //}
-
   h1 {
     font-family: 'Rubik', sans-serif;
     font-size: 24px;
@@ -36,4 +33,13 @@ export const TitleSubtitle = styled.div`
     color: #708797;
   }
 
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+  }
 `;

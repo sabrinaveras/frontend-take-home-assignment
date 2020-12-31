@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Card = styled.div`
+export const Card = styled.section`
   height: 471px;
   max-width: 480px;
   display: flex;
@@ -16,4 +16,11 @@ export const Card = styled.div`
   margin: 24px auto 24px;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 404px) {
+    height: auto;
+    margin-bottom: 63px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 `;

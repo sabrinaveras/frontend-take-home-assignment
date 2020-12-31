@@ -29,4 +29,11 @@ export const Title = styled.section`
   span {
     font-weight: 600;
   }
+
+  @media screen and (max-width: 480px) {
+    h1,
+    span {
+      font-size: 18px;
+    }
+  }
 `;
