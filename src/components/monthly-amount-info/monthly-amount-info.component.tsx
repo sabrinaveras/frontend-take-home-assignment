@@ -33,7 +33,8 @@ const MonthlyAmountInfoComponent: React.FunctionComponent = () => {
         <p>
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           You're planning <span> {date.date.totalMonth} monthly deposits </span>
-          to reach your <span> U$ {valueInput.totalAmountValue} </span>goal by
+          to reach your{' '}
+          <span> U$ {valueInput.totalAmountValue.toString()} </span>goal by
           <span>
             {' '}
             {monthsOfTheYear[date.date.month]} {date.date.year}.
