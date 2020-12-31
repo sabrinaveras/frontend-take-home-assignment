@@ -11,6 +11,7 @@ import { monthsOfTheYear } from '../../utils/monthsOfTheYear';
 
 // styles
 import * as Styled from './monthly-amount-info.styles';
+import { currency } from '../../utils/masks';
 
 const MonthlyAmountInfoComponent: React.FunctionComponent = () => {
   const date = useSelector<DateState, DateTypes>(state => state.date);
@@ -26,7 +27,7 @@ const MonthlyAmountInfoComponent: React.FunctionComponent = () => {
     <Styled.MonthlyAmountInfo>
       <Styled.MonthlyAmount>
         <h3>Monthly amount</h3>
-        <h1>${monthlyAmount}</h1>
+        <h1>${currency(monthlyAmount.toString())}</h1>
       </Styled.MonthlyAmount>
       <Styled.Detail>
         <p>
