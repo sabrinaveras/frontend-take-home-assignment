@@ -31,7 +31,7 @@ const DateComponent: React.FunctionComponent = () => {
   };
 
   React.useEffect(() => {
-    function handleKeyPress(event: React.KeyboardEvent) {
+    function handleKeyPress(event: React.KeyboardEvent): void {
       switch (event.key) {
         case 'ArrowRight':
           dispatch(increaseDate(date));
